@@ -18,13 +18,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MultiProvider(
-        providers: [
-          ChangeNotifierProvider<InputInfoViewModel>(
-            create: (_) => InputInfoViewModel(),
-            child: const InputInfoView(),
-          )
-        ],
+      home: ChangeNotifierProvider<InputInfoViewModel>(
+        create: (_) => InputInfoViewModel(),
+        child: const InputInfoView(),
       ),
     );
   }
